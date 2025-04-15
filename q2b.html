@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Announcement - Mobile</title>
+    <link rel="stylesheet" href="q2b.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Admin Dashboard</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="#">Hikes</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Add Announcement</h2>
+        <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+            <input type="hidden" name="SessionIdentifier" value="db34-af22-bcda6836-8070">
+
+            <label for="title">Title (max 10 words):</label>
+            <input type="text" id="title" name="title" maxlength="100" required>
+
+            <label for="sender">Sender’s Name:</label>
+            <input type="text" id="sender" name="sender" required>
+
+            <label for="attachment">File Attachment:</label>
+            <input type="file" id="attachment" name="attachment">
+
+            <label for="datetime">Date and Time to Send:</label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" required>
+                <option value="High">High</option>
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <label for="message">Message (plain text):</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Announcement</button>
+        </form>
+    </main>
+</body>
+</html>
